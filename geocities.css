@@ -1,0 +1,30 @@
+/* V0.2.3: secret GeoCities mode. All rules are isolated behind body.geo-mode. */
+.geo-ornaments{display:none}
+body.geo-mode{--cyan:#ff00cc;--cyan2:#ffff00;--text:#fffd1b;--muted:#00ff67;--panel:#130073;--border:#ff00e6;color:#ffff00!important;font-family:"Comic Sans MS","Comic Sans",cursive!important;background-color:#090048!important;background-image:radial-gradient(#fff 1.5px,transparent 2px),radial-gradient(#ff0 1px,transparent 2px),linear-gradient(135deg,#000042,#380075,#000040)!important;background-size:35px 35px,83px 83px,auto!important}
+body.geo-mode::before{display:none!important}
+body.geo-mode .header,body.geo-mode .footer{background:linear-gradient(90deg,#ff00c8,#4000ff,#00eaff,#f0f)!important;border:5px ridge yellow;color:#000!important;backdrop-filter:none}
+body.geo-mode .brand,body.geo-mode .header nav a,body.geo-mode .footer *{color:#ffff00!important;text-shadow:2px 2px #f00;font-family:"Comic Sans MS",cursive!important}
+body.geo-mode .section,body.geo-mode .section:nth-child(even),body.geo-mode .hero{background:transparent!important;border-bottom:8px ridge #00ff00!important}
+body.geo-mode .section::before,body.geo-mode .section::after{display:none!important}
+body.geo-mode h1,body.geo-mode h2,body.geo-mode h3,body.geo-mode .eyebrow{font-family:"Comic Sans MS",Papyrus,cursive!important;color:#ffff00!important;text-shadow:3px 3px #f00,-2px -2px #0ff!important;letter-spacing:0!important}
+body.geo-mode h1{animation:geo-wobble 1.8s ease-in-out infinite alternate}
+body.geo-mode .card,body.geo-mode .cv-choice,body.geo-mode .notice{background:linear-gradient(35deg,#ff00c9aa,#0012ffcc,#05f6ff88)!important;border:5px ridge #ffff00!important;border-radius:0!important;box-shadow:7px 7px #f00!important}
+body.geo-mode .card p,body.geo-mode .intro,body.geo-mode .lead,body.geo-mode p,body.geo-mode .tag{color:#faff00!important}
+body.geo-mode button,body.geo-mode .btn,body.geo-mode .filter button{background:linear-gradient(#ff0,#f60)!important;color:#110066!important;border:4px outset #fff!important;border-radius:0!important;font-family:"Comic Sans MS",cursive!important}
+body.geo-mode .geo-ornaments{display:block;position:relative;z-index:1;overflow:hidden;text-align:center;padding:18px 10px;background:repeating-linear-gradient(45deg,#ff00cb,#ff00cb 12px,#00eeff 12px,#00eeff 24px);border-bottom:8px ridge #ffff00}
+body.geo-mode .geo-banner{font-family:"Comic Sans MS",cursive;font-size:clamp(22px,5vw,54px);font-weight:1000;color:#ffff00;text-shadow:4px 4px #f00,-3px -3px #000;animation:geo-rainbow 1.4s steps(4) infinite}
+body.geo-mode .geo-marquee{margin:8px 0;background:#000;color:#00ff00;font:900 19px "Comic Sans MS",cursive;border:4px dashed yellow;white-space:nowrap;overflow:hidden}
+body.geo-mode .geo-marquee span{display:inline-block;padding-left:100%;animation:geo-march 11s linear infinite}
+body.geo-mode .geo-badges{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin-top:14px}
+body.geo-mode .geo-badges span{font:900 14px "Comic Sans MS",cursive;padding:7px;border:4px outset #eee;background:#001050;color:#ffff00}
+body.geo-mode .geo-badges img{width:72px;height:72px;image-rendering:pixelated;object-fit:contain}
+body.geo-mode .geo-flames{font-size:30px;animation:geo-wobble .6s infinite alternate}
+body.geo-mode .geo-counter{background:black!important;color:#0f0!important;font-family:monospace!important;letter-spacing:4px}
+body.geo-mode .geo-hide-hint{font:13px monospace;color:#000;background:#fff;padding:3px 8px;display:inline-block;margin-top:9px}
+body.geo-mode .cv-paper{color:#182b3b!important}
+body.geo-mode .cv-paper *{text-shadow:none!important;animation:none!important;font-family:Arial,sans-serif!important}
+@keyframes geo-march{to{transform:translateX(-170%)}}
+@keyframes geo-rainbow{0%{color:#ff0}25%{color:#0f0}50%{color:#f0f}75%{color:#0ff}}
+@keyframes geo-wobble{to{transform:rotate(2deg) scale(1.03)}}
+@media(prefers-reduced-motion:reduce){body.geo-mode *,body.geo-mode *::before,body.geo-mode *::after{animation:none!important;transition:none!important}}
+@media print{.geo-ornaments{display:none!important}body.geo-mode{background:white!important;color:black!important}body.geo-mode .section{background:white!important}}

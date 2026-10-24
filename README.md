@@ -63,3 +63,9 @@ Descriptions are drafts where precise details have not yet been confirmed. No ac
 - The CV header has linked Website, LinkedIn and Email fields, plus city-level location. Configure the public contact details in `content/cv/shared.js`. Until filled, labels clearly say to add the URL/address.
 - `content/site.js` controls the About Me portrait. No phone number is stored.
 - The actual CV print/PDF layout should be checked in Chrome Print Preview; pagination depends on the final amount of content.
+
+## V0.2.3 — Secret GeoCities mode
+
+Click the `nick@moore:~#` brand in the top-left **five times within about two seconds per click** to toggle an intentionally ridiculous 1990s homepage makeover. Click five times again to restore normal mode. The mode is not saved across page reloads. All changes are isolated to `geocities.css` and `geocities.js`, plus three tiny local animated GIFs in `assets/`. No external resources, trackers, audio or modifications to the editable content files. Animations respect reduced-motion settings; print output hides the joke decorations.
+
+Normal V0.2.2 visual design and content are unchanged.
