@@ -1,0 +1,5 @@
+window.PORTFOLIO.projects = [
+ {id:"seamen-pool",title:"Seamen English Rules Pool",category:"technology",icon:"🎱",summary:"A pirate-themed English 8-ball pool game for browsers and Android.",detail:"A personal game development project featuring campaign progression, unlockable opponents and English pool rules. Add approved screenshots and public links when ready.",tags:["Game development","Web","Android"],links:[]},
+ {id:"flipflopped",title:"FlipFlopped",category:"ventures",icon:"🩴",summary:"An unconventional gift and e-commerce venture.",detail:"A developing independent business project. Add public-facing product information and a live link when ready.",tags:["E-commerce","Branding"],links:[]},
+ {id:"cyber-labs",title:"Cybersecurity Learning Labs",category:"technology",icon:"⌨",summary:"Hands-on Linux, security tooling and practical learning exercises.",detail:"A growing collection of learning exercises and practical security work. Only publish lab details and screenshots that are appropriate to share.",tags:["Linux","Cybersecurity"],links:[]}
+];
