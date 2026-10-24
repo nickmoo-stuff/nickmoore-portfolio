@@ -62,3 +62,14 @@ body::before{content:"";position:fixed;inset:-20vh -15vw;z-index:-1;pointer-even
 @media(max-width:620px){.about-layout{flex-direction:column;align-items:flex-start}.portrait-frame{width:min(62vw,220px)}}
 @media(prefers-reduced-motion:reduce){body::before,.section::after,.portrait-frame{animation:none!important}body::before{opacity:.65;transform:none!important}}
 @media print{body::before,.section::after{display:none!important}}
+
+/* v0.2.4: preserve authored line breaks and display opt-in references */
+.card p, #detail-content p, .about-copy p { white-space: pre-line; }
+.citation-marker { font-size: .75em; vertical-align: super; margin-left: .15em; }
+.citation-marker a { color: var(--accent, #65dfff); text-decoration: underline; }
+.sources-panel { margin-top: 1.2rem; border: 1px solid rgba(120,220,240,.25); border-radius: .7rem; padding: .7rem 1rem; }
+.sources-panel summary { cursor: pointer; font-weight: 650; }
+.sources-list { margin: .8rem 0 .2rem; padding-left: 1.5rem; }
+.sources-list li { margin: .5rem 0; overflow-wrap: anywhere; }
+.sources-list li:focus { outline: 2px solid currentColor; outline-offset: 3px; }
+.source-number { margin-right: .35rem; }

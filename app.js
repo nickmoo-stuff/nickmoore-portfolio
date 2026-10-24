@@ -6,9 +6,41 @@ const add=(parent,...nodes)=>{nodes.filter(Boolean).forEach(n=>parent.append(n))
 const p=(txt,cls='')=>el('p',cls,txt);
 const validUrl=url=>{if(/^((assets|downloads)\/|#)/.test(url))return true;try{let u=new URL(url,location.href);return ['http:','https:','mailto:'].includes(u.protocol)}catch{return false}};
 const link=(label,url,cls='')=>{if(!url||!validUrl(url))return null;let a=el('a',cls,label);a.href=url;if(/^https?:/i.test(url)){a.target='_blank';a.rel='noopener noreferrer'}return a};
+// References are opt-in: only valid sources actually cited in the visible text are shown.
+function referencedSources(item,body){
+ const sources=Array.isArray(item.sources)?item.sources:[];
+ const ids=[...String(body).matchAll(/\[(\d+)\]/g)].map(m=>Number(m[1]));
+ return [...new Set(ids)].map(id=>sources.find(x=>Number(x.id)===id&&x.label&&x.url&&/^https?:\/\//i.test(x.url)&&validUrl(x.url))).filter(Boolean);
+}
+function citedText(body,item,cls=''){
+ const node=el('p',cls),available=referencedSources(item,body),byId=new Map(available.map(x=>[Number(x.id),x]));
+ let offset=0;const pattern=/\[(\d+)\]/g;let match;
+ while((match=pattern.exec(String(body)))!==null){
+  node.append(document.createTextNode(String(body).slice(offset,match.index)));
+  const id=Number(match[1]);
+  if(byId.has(id)){const sup=el('sup','citation-marker');const a=el('a','',`[${id}]`);a.href=`#source-${item.id}-${id}`;a.setAttribute('aria-label',`Reference ${id}: ${byId.get(id).label}`);a.addEventListener('click',e=>{e.preventDefault();const target=document.getElementById(`source-${item.id}-${id}`);target?.scrollIntoView({block:'nearest',behavior:'smooth'});target?.focus()});sup.append(a);node.append(sup)}
+  else node.append(document.createTextNode(match[0]));
+  offset=pattern.lastIndex;
+ }
+ node.append(document.createTextNode(String(body).slice(offset)));return node;
+}
+function sourcePanel(item,body){
+ const sources=referencedSources(item,body);if(!sources.length)return null;
+ const panel=el('details','sources-panel'),summary=el('summary','',`Sources & references (${sources.length})`),list=el('ol','sources-list');
+ for(const source of sources){const li=el('li');li.id=`source-${item.id}-${source.id}`;li.tabIndex=-1;li.append(el('span','source-number',`[${source.id}] `));li.append(link(source.label,source.url));list.append(li)}
+ panel.append(summary,list);return panel;
+}
 function section(id){let s=el('section','section'+(id==='welcome'?' hero':''));s.id=id;const title=site.sectionNames?.[id]||id;if(id!=='welcome')add(s,el('div','eyebrow','./'+title.replace(/[^a-z0-9]+/gi,'_')),el('h2','',title));return s}
-function card(item){let c=el('article','card');if(item.image&&/^assets\//.test(item.image)){let im=el('img','card-image');im.src=item.image;im.alt=item.imageAlt||item.title;im.loading='lazy';c.append(im)}else c.append(el('div','icon',item.icon||'◇'));add(c,el('h3','',item.title),p(item.summary||'', 'small'));(item.tags||[]).forEach(t=>c.append(el('span','tag',t)));let b=el('button','','View details →');b.type='button';b.addEventListener('click',()=>openDetail(item));c.append(el('div','actions',undefined));c.lastChild.append(b);return c}
-function openDetail(item){let d=document.getElementById('detail-content');d.replaceChildren(el('div','eyebrow','./Details'),el('h2','',item.title),p(item.detail||item.summary||'More information coming soon.'));if(item.status)d.append(el('span','tag',item.status));if(item.draft)d.append(p('Draft summary — details awaiting confirmation.','notice'));let row=el('div','link-row');(item.links||[]).forEach(x=>{let a=link(x.label,x.url);if(a)row.append(a)});if(row.children.length)d.append(row);dialog.showModal();history.replaceState(null,'','#'+item.id)}
+function card(item){let c=el('article','card');if(item.image&&/^assets\//.test(item.image)){let im=el('img','card-image');im.src=item.image;im.alt=item.imageAlt||item.title;im.loading='lazy';c.append(im)}else c.append(el('div','icon',item.icon||'◇'));add(c,el('h3','',item.title),citedText(item.summary||'',item,'small'));(item.tags||[]).forEach(t=>c.append(el('span','tag',t)));let b=el('button','','View details →');b.type='button';b.addEventListener('click',()=>openDetail(item));c.append(el('div','actions',undefined));c.lastChild.append(b);return c}
+function openDetail(item){
+ let d=document.getElementById('detail-content');const body=item.detail||item.summary||'More information coming soon.';
+ d.replaceChildren(el('div','eyebrow','./Details'),el('h2','',item.title),citedText(body,item));
+ if(item.status)d.append(el('span','tag',item.status));
+ if(item.draft)d.append(p('Draft summary — details awaiting confirmation.','notice'));
+ const sources=sourcePanel(item,body);if(sources)d.append(sources);
+ let row=el('div','link-row');(item.links||[]).forEach(x=>{let a=link(x.label,x.url);if(a)row.append(a)});
+ if(row.children.length)d.append(row);dialog.showModal();history.replaceState(null,'','#'+item.id)
+}
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 function grid(items){let g=el('div','grid');items.filter(x=>x.visible!==false).forEach(x=>g.append(card(x)));return g}
 function intro(s,text){s.append(p(text,'intro'));return s}

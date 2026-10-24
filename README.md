@@ -69,3 +69,18 @@ Descriptions are drafts where precise details have not yet been confirmed. No ac
 Click the `nick@moore:~#` brand in the top-left **five times within about two seconds per click** to toggle an intentionally ridiculous 1990s homepage makeover. Click five times again to restore normal mode. The mode is not saved across page reloads. All changes are isolated to `geocities.css` and `geocities.js`, plus three tiny local animated GIFs in `assets/`. No external resources, trackers, audio or modifications to the editable content files. Animations respect reduced-motion settings; print output hides the joke decorations.
 
 Normal V0.2.2 visual design and content are unchanged.
+
+
+## V0.2.4 — optional citations
+
+Each card may have a `sources` array. In its `detail` (or `summary` if no detail exists), insert markers such as `[1]` after a supported claim. Example:
+
+```js
+{
+  id: 'example', title: 'Example',
+  detail: `A notable claim. [1]\n\nA second paragraph.`,
+  sources: [{ id: 1, label: 'Read the original article', url: 'https://example.com/article' }]
+}
+```
+
+Only sources with matching markers and valid URLs appear in the expandable Sources & references panel. Cards without citations show no panel. `links` remains available for unrelated general links. Run `node validate.mjs` to catch missing, duplicate or unused sources. Backtick template literals and blank lines are supported for multi-paragraph descriptions.
