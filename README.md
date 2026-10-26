@@ -84,3 +84,12 @@ Each card may have a `sources` array. In its `detail` (or `summary` if no detail
 ```
 
 Only sources with matching markers and valid URLs appear in the expandable Sources & references panel. Cards without citations show no panel. `links` remains available for unrelated general links. Run `node validate.mjs` to catch missing, duplicate or unused sources. Backtick template literals and blank lines are supported for multi-paragraph descriptions.
+
+
+## V0.2.5 — inline text emphasis
+
+In content fields rendered as card summaries or detail descriptions, use `**bold**`, `*italic*`, or `***bold and italic***` inside normal quoted strings or multiline backtick template literals. Existing `[1]` citation markers still work, including immediately after emphasized text. Formatting is safely rendered as text and DOM elements (not raw HTML). No change to GeoCities mode or the opt-in references system.
+
+
+## v0.2.6 — Current spotlight
+Edit `content/spotlight.js` to set each tile's `enabled`, `order`, `title`, `description`, `image` and `href`. The first four enabled entries sorted by ascending `order` are displayed. A hidden entry remains available for future use. Images are editable local SVGs in `assets/`. `href` can target a section (e.g. `#projects`) or an existing card (e.g. `#seamen-pool`), which opens its details. With no enabled tiles, the spotlight panel disappears.

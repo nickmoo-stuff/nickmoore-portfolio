@@ -73,3 +73,17 @@ body::before{content:"";position:fixed;inset:-20vh -15vw;z-index:-1;pointer-even
 .sources-list li { margin: .5rem 0; overflow-wrap: anywhere; }
 .sources-list li:focus { outline: 2px solid currentColor; outline-offset: 3px; }
 .source-number { margin-right: .35rem; }
+
+/* v0.2.6: responsive, data-driven hero spotlight */
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);align-items:center;gap:clamp(30px,5vw,76px);max-width:1370px;margin-inline:auto}
+.hero-copy{min-width:0}.hero-copy h1{font-size:clamp(48px,6vw,88px)}
+.spotlight{min-width:0}.spotlight-heading{font:700 15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:0;margin:0 0 13px;color:var(--text)}
+.spotlight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.spotlight-tile{position:relative;display:block;aspect-ratio:1.62;min-width:0;overflow:hidden;border:1px solid #3b6077;border-radius:11px;background:#14283b;text-decoration:none;box-shadow:0 6px 22px #0003;transition:transform .2s,border-color .2s,box-shadow .2s}
+.spotlight-tile:hover,.spotlight-tile:focus-visible{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 0 0 1px #31cbea55,0 12px 28px #0007}
+.spotlight-image{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.spotlight-tile:hover .spotlight-image{transform:scale(1.045)}
+.spotlight-caption{position:absolute;inset:auto 0 0;display:flex;flex-direction:column;gap:2px;padding:23px 12px 10px;background:linear-gradient(transparent,rgba(3,12,25,.92) 58%,rgba(3,12,25,.96));color:#fff;text-shadow:0 1px 3px #0009}
+.spotlight-caption strong{font-size:clamp(12px,1.1vw,15px);line-height:1.25}.spotlight-description{font-size:clamp(10px,.9vw,12px);color:#d3e9f4;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:980px){.hero-layout{grid-template-columns:1fr;gap:44px}.hero-copy h1{font-size:clamp(48px,9vw,88px)}.spotlight{max-width:660px}.spotlight-tile{aspect-ratio:1.85}.spotlight-caption strong{font-size:15px}.spotlight-description{font-size:12px}}
+@media(max-width:480px){.spotlight-grid{gap:9px}.spotlight-tile{aspect-ratio:1.12}.spotlight-caption{padding:20px 8px 8px}.spotlight-caption strong{font-size:12px}.spotlight-description{font-size:10px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+@media(prefers-reduced-motion:reduce){.spotlight-tile,.spotlight-image{transition:none!important}.spotlight-tile:hover,.spotlight-tile:focus-visible,.spotlight-tile:hover .spotlight-image{transform:none!important}}

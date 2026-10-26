@@ -12,17 +12,29 @@ function referencedSources(item,body){
  const ids=[...String(body).matchAll(/\[(\d+)\]/g)].map(m=>Number(m[1]));
  return [...new Set(ids)].map(id=>sources.find(x=>Number(x.id)===id&&x.label&&x.url&&/^https?:\/\//i.test(x.url)&&validUrl(x.url))).filter(Boolean);
 }
+// Safe inline formatting: ***bold italic***, **bold**, *italic*, and numbered citations.
+// All user-authored content remains text nodes; no HTML is interpreted.
 function citedText(body,item,cls=''){
  const node=el('p',cls),available=referencedSources(item,body),byId=new Map(available.map(x=>[Number(x.id),x]));
- let offset=0;const pattern=/\[(\d+)\]/g;let match;
- while((match=pattern.exec(String(body)))!==null){
-  node.append(document.createTextNode(String(body).slice(offset,match.index)));
-  const id=Number(match[1]);
-  if(byId.has(id)){const sup=el('sup','citation-marker');const a=el('a','',`[${id}]`);a.href=`#source-${item.id}-${id}`;a.setAttribute('aria-label',`Reference ${id}: ${byId.get(id).label}`);a.addEventListener('click',e=>{e.preventDefault();const target=document.getElementById(`source-${item.id}-${id}`);target?.scrollIntoView({block:'nearest',behavior:'smooth'});target?.focus()});sup.append(a);node.append(sup)}
-  else node.append(document.createTextNode(match[0]));
+ const value=String(body);const pattern=/(\*\*\*([^*\n]+)\*\*\*|\*\*([^*\n]+)\*\*|\*([^*\n]+)\*|\[(\d+)\])/g;
+ let offset=0,match;
+ while((match=pattern.exec(value))!==null){
+  node.append(document.createTextNode(value.slice(offset,match.index)));
+  if(match[2]!==undefined){const strong=el('strong');strong.append(el('em','',match[2]));node.append(strong)}
+  else if(match[3]!==undefined)node.append(el('strong','',match[3]));
+  else if(match[4]!==undefined)node.append(el('em','',match[4]));
+  else {
+   const id=Number(match[5]);
+   if(byId.has(id)){
+    const sup=el('sup','citation-marker'),a=el('a','',`[${id}]`);
+    a.href=`#source-${item.id}-${id}`;a.setAttribute('aria-label',`Reference ${id}: ${byId.get(id).label}`);
+    a.addEventListener('click',e=>{e.preventDefault();const target=document.getElementById(`source-${item.id}-${id}`);target?.scrollIntoView({block:'nearest',behavior:'smooth'});target?.focus()});
+    sup.append(a);node.append(sup);
+   }else node.append(document.createTextNode(match[0]));
+  }
   offset=pattern.lastIndex;
  }
- node.append(document.createTextNode(String(body).slice(offset)));return node;
+ node.append(document.createTextNode(value.slice(offset)));return node;
 }
 function sourcePanel(item,body){
  const sources=referencedSources(item,body);if(!sources.length)return null;
@@ -44,7 +56,34 @@ function openDetail(item){
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 function grid(items){let g=el('div','grid');items.filter(x=>x.visible!==false).forEach(x=>g.append(card(x)));return g}
 function intro(s,text){s.append(p(text,'intro'));return s}
-function renderWelcome(){let s=section('welcome');add(s,el('div','eyebrow','> HELLO, I’M'));let name=el('h1','typewriter');name.dataset.text=site.name||'Nick Moore';name.textContent=site.name||'Nick Moore';s.append(name,el('div','eyebrow',site.headline||''),p(site.tagline||'','lead'));let row=el('div','actions');row.append(link('Explore my work ↓','#projects','btn'));let cv=link('View CV ↓','#cv','btn alt');if(cv)row.append(cv);s.append(row);return s}
+function renderSpotlight(){
+ const items=(Array.isArray(data.spotlight)?data.spotlight:[])
+  .filter(x=>x.enabled===true&&x.title&&x.image&&/^assets\/[a-z0-9/_-]+\.(svg|png|jpg|jpeg|webp)$/i.test(x.image)&&/^#[a-z0-9-]+$/i.test(x.href||''))
+  .sort((a,b)=>(Number(a.order)||0)-(Number(b.order)||0)).slice(0,4);
+ if(!items.length)return null;
+ const aside=el('aside','spotlight');aside.setAttribute('aria-label','Current spotlight');
+ aside.append(el('h2','spotlight-heading','Current spotlight'));
+ const tiles=el('div','spotlight-grid');
+ items.forEach(item=>{
+  const a=link(item.title,item.href,'spotlight-tile');if(!a)return;
+  a.textContent='';a.setAttribute('aria-label',item.title+' — '+(item.description||''));
+  const img=el('img','spotlight-image');img.src=item.image;img.alt='';img.loading='eager';
+  const overlay=el('span','spotlight-caption');overlay.append(el('strong','',item.title));
+  if(item.description)overlay.append(el('span','spotlight-description',item.description));
+  a.append(img,overlay);tiles.append(a);
+ });
+ aside.append(tiles);return aside;
+}
+function renderWelcome(){
+ let s=section('welcome'),layout=el('div','hero-layout'),copy=el('div','hero-copy');
+ add(copy,el('div','eyebrow','> HELLO, I’M'));
+ let name=el('h1','typewriter');name.dataset.text=site.name||'Nick Moore';name.textContent=site.name||'Nick Moore';
+ copy.append(name,el('div','eyebrow',site.headline||''),p(site.tagline||'','lead'));
+ let row=el('div','actions');row.append(link('Explore my work ↓','#projects','btn'));
+ let cv=link('View CV ↓','#cv','btn alt');if(cv)row.append(cv);copy.append(row);
+ layout.append(copy);let spotlight=renderSpotlight();if(spotlight)layout.append(spotlight);
+ s.append(layout);return s;
+}
 function renderAbout(){let s=section('about');let layout=el('div','about-layout');let copy=el('div','about-copy');add(copy,p(site.introduction||''),p(site.about||''));if(site.portrait&&/^assets\//.test(site.portrait)){let frame=el('div','portrait-frame');let image=el('img','about-portrait');image.src=site.portrait;image.alt='Portrait of Nick Moore';image.loading='lazy';frame.append(image);layout.append(frame)}layout.append(copy);s.append(layout);let row=el('div','social-links');[['✉ Email',site.links?.email?'mailto:'+site.links.email:''],['in LinkedIn',site.links?.linkedin],['▤ View CV','#cv']].forEach(([name,url])=>{let a=link(name,url,'btn alt');if(a)row.append(a)});s.append(row);return s}
 function renderProfiles(){return intro(section('profiles'),'Explore my areas of experience and interest. Select a profile to learn more.').appendChild(grid(data.profiles||[])).parentElement}
 function renderExperience(){let s=intro(section('experience-qualifications'),'A career built across different industries, alongside ongoing learning and professional development.');s.append(el('h3','subheading','Experience'),grid(data.experience||[]),el('h3','subheading','Qualifications & Training'),grid(data.qualifications||[]));return s}
