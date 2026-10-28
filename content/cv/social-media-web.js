@@ -1,19 +1,22 @@
-// Edit this version-specific summary, skills and record order.
 window.PORTFOLIO.cvVersions["social-media-web"] = {
   "title": "Social Media & Web",
-  "summary": "Digital communications professional with experience in social media, content creation and creative digital projects.",
+  "summary": "Digital communications specialist with leadership experience, content design, analytics, social media strategy and web publishing.",
   "skills": [
-    "Social media",
+    "Social media strategy",
+    "CMS publishing",
     "Copywriting",
-    "Content planning",
-    "Web & graphics"
+    "Analytics",
+    "Team leadership"
   ],
   "roleIds": [
-    "digital-comms",
+    "council",
     "events"
   ],
   "qualificationIds": [
+    "ba",
+    "btec",
     "security-plus",
+    "secai",
     "crest-cpsa"
   ]
 };

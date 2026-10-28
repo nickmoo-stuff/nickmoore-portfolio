@@ -1,19 +1,22 @@
-// Edit this version-specific summary, skills and record order.
 window.PORTFOLIO.cvVersions["local-government"] = {
   "title": "Local Government",
-  "summary": "Professional with public-sector digital communications experience and an interest in service delivery, information governance and stakeholder engagement.",
+  "summary": "Public-sector professional with extensive experience in local-government communications, digital service delivery, stakeholders and customer support.",
   "skills": [
-    "Public service",
-    "Digital communications",
+    "Local government",
+    "Stakeholder engagement",
     "Information governance",
-    "Stakeholder engagement"
+    "Team leadership",
+    "Public-facing content"
   ],
   "roleIds": [
-    "digital-comms",
-    "events"
+    "council",
+    "union"
   ],
   "qualificationIds": [
+    "ba",
+    "btec",
     "security-plus",
+    "secai",
     "crest-cpsa"
   ]
 };

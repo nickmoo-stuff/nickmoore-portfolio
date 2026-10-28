@@ -87,3 +87,6 @@ body::before{content:"";position:fixed;inset:-20vh -15vw;z-index:-1;pointer-even
 @media(max-width:980px){.hero-layout{grid-template-columns:1fr;gap:44px}.hero-copy h1{font-size:clamp(48px,9vw,88px)}.spotlight{max-width:660px}.spotlight-tile{aspect-ratio:1.85}.spotlight-caption strong{font-size:15px}.spotlight-description{font-size:12px}}
 @media(max-width:480px){.spotlight-grid{gap:9px}.spotlight-tile{aspect-ratio:1.12}.spotlight-caption{padding:20px 8px 8px}.spotlight-caption strong{font-size:12px}.spotlight-description{font-size:10px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
 @media(prefers-reduced-motion:reduce){.spotlight-tile,.spotlight-image{transition:none!important}.spotlight-tile:hover,.spotlight-tile:focus-visible,.spotlight-tile:hover .spotlight-image{transform:none!important}}
+
+/* V0.2.7: preserve portrait book cover without cropping. */
+#books .card-image{object-fit:contain;background:rgba(5,12,24,.75);max-height:320px}

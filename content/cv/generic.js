@@ -1,19 +1,23 @@
-// Edit this version-specific summary, skills and record order.
 window.PORTFOLIO.cvVersions["generic"] = {
   "title": "Generic",
-  "summary": "Experienced professional with a diverse background across communications, customer service, technology and creative projects.",
+  "summary": "Experienced professional with 14 years in local government, combining communications, customer service, leadership and creative technical projects.",
   "skills": [
-    "Communication",
-    "Digital tools",
-    "Customer service",
-    "Leadership"
+    "Leadership",
+    "Customer services",
+    "Digital communications",
+    "Microsoft 365",
+    "Content design"
   ],
   "roleIds": [
-    "digital-comms",
+    "council",
+    "union",
     "events"
   ],
   "qualificationIds": [
+    "ba",
+    "btec",
     "security-plus",
+    "secai",
     "crest-cpsa"
   ]
 };

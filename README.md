@@ -93,3 +93,9 @@ In content fields rendered as card summaries or detail descriptions, use `**bold
 
 ## v0.2.6 — Current spotlight
 Edit `content/spotlight.js` to set each tile's `enabled`, `order`, `title`, `description`, `image` and `href`. The first four enabled entries sorted by ascending `order` are displayed. A hidden entry remains available for future use. Images are editable local SVGs in `assets/`. `href` can target a section (e.g. `#projects`) or an existing card (e.g. `#seamen-pool`), which opens its details. With no enabled tiles, the spotlight panel disappears.
+
+
+## V0.2.7 update
+Added supplied music and book artwork, 22 music releases plus a Christmas playlist, career and Journey copy, populated tailored CVs, projects and Google Forms contact link. No public email address or telephone number is embedded.
+
+**Source note:** This package is based on the provided V0.2.6 ZIP, not a fresh GitHub checkout. Compare any edits made directly on GitHub since V0.2.6 before replacing those files.

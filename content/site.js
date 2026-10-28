@@ -8,7 +8,7 @@ window.PORTFOLIO.site = {
   introduction: "I'm Nick Moore, a technology enthusiast, creative thinker and experienced professional with a background spanning digital communications, customer service, leadership and the creative industries.",
   about: "These days I'm expanding my technical expertise into cybersecurity while continuing to develop software, explore new ideas and occasionally pursue projects that are a little outside the ordinary. This website brings together my professional experience, creative work and a few unexpected adventures along the way.",
   // Leave unknown links blank. They will not appear publicly.
-  links: { linkedin: "", email: "", youtube: "", spotify: "" },
+  links: { linkedin: "https://linkedin.com/in/nick-moore-digital", email: "", youtube: "", spotify: "https://open.spotify.com/artist/4qk2nsXpYgtEm2B8jghNHI" },
   // Change the order here. Each section ID must appear only once.
   sectionOrder: ["welcome", "about", "profiles", "experience-qualifications", "projects", "achievements", "journey", "cv", "music", "books", "hobbies", "contact"],
   sectionNames: {welcome:"Welcome",about:"About Me",profiles:"Professional Profiles","experience-qualifications":"Experience & Qualifications",projects:"Projects",achievements:"Achievements & Adventures",journey:"My Journey",cv:"Curriculum Vitae",music:"Music",books:"Books",hobbies:"Beyond the Desk",contact:"Contact"},

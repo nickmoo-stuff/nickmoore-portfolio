@@ -1,19 +1,22 @@
-// Edit this version-specific summary, skills and record order.
 window.PORTFOLIO.cvVersions["cybersecurity-tech"] = {
   "title": "Cybersecurity & Tech",
-  "summary": "Technology enthusiast developing practical cybersecurity knowledge alongside experience in digital systems, troubleshooting and independent software projects.",
+  "summary": "Career-changing technology enthusiast studying cybersecurity, with experience in digital systems, web publishing, troubleshooting and practical projects.",
   "skills": [
-    "Cybersecurity studies",
-    "Linux learning",
+    "Security+ studies",
+    "Linux labs",
+    "Web development",
     "Technical troubleshooting",
-    "Web development"
+    "Information governance"
   ],
   "roleIds": [
-    "digital-comms",
+    "council",
     "events"
   ],
   "qualificationIds": [
+    "ba",
+    "btec",
     "security-plus",
+    "secai",
     "crest-cpsa"
   ]
 };
