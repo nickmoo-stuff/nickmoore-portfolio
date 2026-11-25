@@ -15,7 +15,8 @@ window.PORTFOLIO.cvShared = {
         "Fourteen years across digital communications, web content and customer service.",
         "Led a small social media team and advised stakeholders across council services.",
         "Wrote, proofread and published CMS content; used analytics to support decisions.",
-        "Contributed to an organic public-awareness campaign reaching over 3 million people."
+        "Contributed to an organic public-awareness campaign reaching over 3 million people.",
+        "Project management."
       ]
     },
     {
@@ -25,7 +26,9 @@ window.PORTFOLIO.cvShared = {
       "dates": "2007–08 / 2010–11",
       "bullets": [
         "Student representation, stakeholder engagement and leadership.",
-        "Served on the Board of Governors at Leeds College of Music."
+        "Served on the Board of Governors at Leeds College of Music.",
+        "Bookkeeping, budgeting and annual accounts.",
+        "Project management."
       ]
     },
     {
