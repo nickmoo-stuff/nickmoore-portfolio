@@ -48,7 +48,7 @@ window.PORTFOLIO.qualifications = [
     "id": "other-training",
     "title": "Other Training and Professional Development",
     "summary": "Additional training in management, digital skills, mentoring and workplace wellbeing.",
-    "detail": "c. 2007 — Entry Level Youth Work (Level 1)\n\nc. 2008 — Business Start-up Course (3 days)\n\nc. 2008 — Train the Trainer: Mentoring\n\n2011 — Emergency First Aid at Work (expired)\n\n2015 — Google Academy: SEO, content design and social marketing\n\n2015 — Social Media Law Masterclass\n\n2015 — Project Management (PM) Lite Fundamentals\n\n2016 — DSE Assessor\n\n2017 — Managing Mental Health in the Workplace\n\n2018 — First Time Manager Programme\n\n2019 — Manager as Coach / Coaching in the Workplace\n\n2019 — Introduction to Outcome Based Accountability\n\nc. 2019 — Established Manager Training\n\n2022 — Disability Confident and Inclusion Essentials\n\n2024 — Information Governance Level 1\n\nc. 2024 — Mental Health Awareness for Managers\n\n2025 — Inclusive Recruitment and Selection\n\n2026 — Sec0 Professional Certification: Cybersecurity Fundamentals (in progress)",
+    "detail": "c. 2007 — Entry Level Youth Work (Level 1)\n\nc. 2008 — Business Start-up Course (3 days)\n\nc. 2008 — Train the Trainer: Mentoring\n\n2011 — Emergency First Aid at Work (expired)\n\n2015 — Google Academy: SEO, content design and social marketing\n\n2015 — Social Media Law Masterclass\n\n2015 — Project Management (PM) Lite Fundamentals\n\n2016 — DSE Assessor\n\n2017 — Managing Mental Health in the Workplace\n\n2018 — First Time Manager Programme\n\n2019 — Manager as Coach / Coaching in the Workplace\n\n2019 — Introduction to Outcome Based Accountability\n\nc. 2019 — Established Manager Training\n\n2022 — Disability Confident and Inclusion Essentials\n\n2024 — Information Governance Level 1\n\nc. 2024 — Mental Health Awareness for Managers\n\n2025 — Inclusive Recruitment and Selection",
     "training": [
       "c. 2007 — Entry Level Youth Work (Level 1)",
       "c. 2008 — Business Start-up Course (3 days)",
@@ -66,8 +66,7 @@ window.PORTFOLIO.qualifications = [
       "2022 — Disability Confident and Inclusion Essentials",
       "2024 — Information Governance Level 1",
       "c. 2024 — Mental Health Awareness for Managers",
-      "2025 — Inclusive Recruitment and Selection",
-      "2026 — Sec0 Professional Certification: Cybersecurity Fundamentals (in progress)"
+      "2025 — Inclusive Recruitment and Selection"
     ]
   },
   {
