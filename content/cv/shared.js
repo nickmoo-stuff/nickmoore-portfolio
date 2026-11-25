@@ -85,6 +85,21 @@ window.PORTFOLIO.cvShared = {
       "id": "mentoring",
       "title": "Level 3 qualification in Mentoring",
       "status": "Completed"
+    },
+    {
+      "id": "l2-website-design",
+      "title": "Level 2 Award in Website Design and Development",
+      "status": "Currently studying — expected award December 2026"
+    },
+    {
+      "id": "l2-digital-ai",
+      "title": "Level 2 Award in Digital and IT Skills (Introduction to AI)",
+      "status": "Currently studying — expected award December 2026"
+    },
+    {
+      "id": "ncfe-l2-cyber",
+      "title": "NCFE L2 Certificate in the Principles of Cyber Security",
+      "status": "Currently studying — expected award December 2026"
     }
   ],
   "techCompetencies": {

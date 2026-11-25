@@ -19,7 +19,10 @@ window.PORTFOLIO.cvVersions["broad"] = {
     "btec",
     "security-plus",
     "crest-cpsa",
-    "mentoring"
+    "mentoring",
+    "l2-website-design",
+    "l2-digital-ai",
+    "ncfe-l2-cyber"
   ],
   "competencyGroups": [
     "Customer services",

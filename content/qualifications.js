@@ -84,5 +84,32 @@ window.PORTFOLIO.qualifications = [
       "Digital — Storage Essentials",
       "Digital — Process Innovation"
     ]
+  },
+  {
+    "id": "l2-website-design",
+    "title": "Level 2 Award in Website Design and Development",
+    "summary": "Currently studying — expected award December 2026.",
+    "status": "Studying",
+    "tags": [
+      "Expected December 2026"
+    ]
+  },
+  {
+    "id": "l2-digital-ai",
+    "title": "Level 2 Award in Digital and IT Skills (Introduction to AI)",
+    "summary": "Currently studying — expected award December 2026.",
+    "status": "Studying",
+    "tags": [
+      "Expected December 2026"
+    ]
+  },
+  {
+    "id": "ncfe-l2-cyber",
+    "title": "NCFE L2 Certificate in the Principles of Cyber Security",
+    "summary": "Currently studying — expected award December 2026.",
+    "status": "Studying",
+    "tags": [
+      "Expected December 2026"
+    ]
   }
 ];
