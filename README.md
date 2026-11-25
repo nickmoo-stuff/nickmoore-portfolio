@@ -99,3 +99,6 @@ Edit `content/spotlight.js` to set each tile's `enabled`, `order`, `title`, `des
 Added supplied music and book artwork, 22 music releases plus a Christmas playlist, career and Journey copy, populated tailored CVs, projects and Google Forms contact link. No public email address or telephone number is embedded.
 
 **Source note:** This package is based on the provided V0.2.6 ZIP, not a fresh GitHub checkout. Compare any edits made directly on GitHub since V0.2.6 before replacing those files.
+
+## V0.2.8
+Live shop spotlight, expanded professional experience, five tailored CVs and technical competencies, refreshed training and About Me.

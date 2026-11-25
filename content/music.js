@@ -79,6 +79,16 @@ window.PORTFOLIO.music = [
     ]
   },
   {
+    "id": "release-nazgul-nine",
+    "title": "Nazgul Nine",
+    "icon": "♫",
+    "summary": "2025 · Album — Heavy rizz-metal concept album created by the Nazgul Nine as they attempt to form a band and hold their band meetings in the local McDonald's.",
+    "tags": [
+      "Album",
+      "2025"
+    ]
+  },
+  {
     "id": "release-the-saga-of-ducks-in-space",
     "title": "The Saga of Ducks in Space",
     "icon": "♫",
