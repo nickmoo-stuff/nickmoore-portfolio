@@ -12,7 +12,7 @@ window.PORTFOLIO.profiles = [
   },
   {
     "id": "copywriting",
-    "title": "Copywriting & Proofreading",
+    "title": "Copywriting and Proofreading",
     "icon": "✍",
     "summary": "Clear communication, editorial judgement and written content.",
     "detail": "Professional experience writing, editing and proofreading public-facing web and social content in local government."
@@ -47,14 +47,14 @@ window.PORTFOLIO.profiles = [
   },
   {
     "id": "inventory",
-    "title": "Asset & Inventory Management",
+    "title": "Asset and Inventory Management",
     "icon": "▤",
     "summary": "Organisation, tracking and operational processes.",
     "detail": "Operational organisation and process improvement experience; additional examples can be added as available."
   },
   {
     "id": "web",
-    "title": "Web & Graphics",
+    "title": "Web and Graphics",
     "icon": "⌘",
     "summary": "Websites, visual design and digital production.",
     "detail": "Content management systems, HTML/CSS, website publishing, visual content and independently built web projects."
@@ -68,16 +68,29 @@ window.PORTFOLIO.profiles = [
   },
   {
     "id": "gdpr",
-    "title": "GDPR & Information Governance",
+    "title": "GDPR and Information Governance",
     "icon": "⚿",
     "summary": "Responsible information handling, privacy and governance.",
     "detail": "Practical GDPR and information-governance awareness through local-government communications and customer-facing work."
   },
   {
     "id": "ai",
-    "title": "AI & Workflow Automation",
+    "title": "AI and Workflow Automation",
     "icon": "✧",
     "summary": "Exploring practical AI-assisted workflows and process improvements.",
     "detail": "Exploring AI-supported content, development and workflow automation in personal projects."
+  },
+  {
+    "id": "game-development",
+    "title": "Web and Android Game Development",
+    "icon": "🎮",
+    "summary": "From pre-planning to public release and monetisation.",
+    "detail": "Independent game development including design, prototyping, implementation, testing, browser publishing, Android builds, Google Play release and monetisation.",
+    "links": [
+      {
+        "label": "Seamen Games",
+        "url": "https://seamengames.com"
+      }
+    ]
   }
 ];

@@ -24,7 +24,7 @@ window.PORTFOLIO.projects = [
     "category": "ventures",
     "icon": "🩴",
     "summary": "An unconventional gift and e-commerce venture.",
-    "detail": "A developing independent business project. Add public-facing product information and a live link when ready.",
+    "detail": "Live independent e-commerce business offering a single flip-flop with a handwritten message. Stock available to buy.",
     "tags": [
       "E-commerce",
       "Branding"

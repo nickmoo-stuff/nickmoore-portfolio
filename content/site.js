@@ -11,11 +11,11 @@ window.PORTFOLIO.site = {
   links: { linkedin: "https://linkedin.com/in/nick-moore-digital", email: "", youtube: "", spotify: "https://open.spotify.com/artist/4qk2nsXpYgtEm2B8jghNHI" },
   // Change the order here. Each section ID must appear only once.
   sectionOrder: ["welcome", "about", "profiles", "experience-qualifications", "projects", "achievements", "journey", "cv", "music", "books", "hobbies", "contact"],
-  sectionNames: {welcome:"Welcome",about:"About Me",profiles:"Professional Profiles","experience-qualifications":"Experience & Qualifications",projects:"Projects",achievements:"Achievements & Adventures",journey:"My Journey",cv:"Curriculum Vitae",music:"Music",books:"Books",hobbies:"Beyond the Desk",contact:"Contact"},
+  sectionNames: {welcome:"Welcome",about:"About Me",profiles:"Professional Profiles","experience-qualifications":"Experience and Qualifications",projects:"Projects",achievements:"Achievements and Adventures",journey:"My Journey",cv:"Curriculum Vitae",music:"Music",books:"Books",hobbies:"Beyond the Desk",contact:"Contact"},
   projectCategories: [
-    {id:"technology",label:"Technology & Software"},
-    {id:"ventures",label:"Businesses & Ventures"},
-    {id:"campaigns",label:"Campaigns & Stunts"},
+    {id:"technology",label:"Technology and Software"},
+    {id:"ventures",label:"Businesses and Ventures"},
+    {id:"campaigns",label:"Campaigns and Stunts"},
     {id:"creative",label:"Creative Industries"}
   ]
 };

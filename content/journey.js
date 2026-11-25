@@ -15,6 +15,6 @@ window.PORTFOLIO.journey = [
     "id": "bolton",
     "title": "Bolton",
     "years": "Now",
-    "summary": "A new chapter: personal creative and technology projects alongside studies towards CompTIA Security+, CompTIA SecAI+ and CREST CPSA. Plenty more to come."
+    "summary": "A new chapter: personal creative and technology projects alongside studies towards CompTIA Security+ and CREST CPSA/CPIA or equivalent. Plenty more to come."
   }
 ];

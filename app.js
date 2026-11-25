@@ -38,7 +38,7 @@ function citedText(body,item,cls=''){
 }
 function sourcePanel(item,body){
  const sources=referencedSources(item,body);if(!sources.length)return null;
- const panel=el('details','sources-panel'),summary=el('summary','',`Sources & references (${sources.length})`),list=el('ol','sources-list');
+ const panel=el('details','sources-panel'),summary=el('summary','',`Sources and references (${sources.length})`),list=el('ol','sources-list');
  for(const source of sources){const li=el('li');li.id=`source-${item.id}-${source.id}`;li.tabIndex=-1;li.append(el('span','source-number',`[${source.id}] `));li.append(link(source.label,source.url));list.append(li)}
  panel.append(summary,list);return panel;
 }
@@ -58,7 +58,7 @@ function grid(items){let g=el('div','grid');items.filter(x=>x.visible!==false).f
 function intro(s,text){s.append(p(text,'intro'));return s}
 function renderSpotlight(){
  const items=(Array.isArray(data.spotlight)?data.spotlight:[])
-  .filter(x=>x.enabled===true&&x.title&&x.image&&/^assets\/[a-z0-9/_-]+\.(svg|png|jpg|jpeg|webp)$/i.test(x.image)&&/^#[a-z0-9-]+$/i.test(x.href||''))
+  .filter(x=>x.enabled===true&&x.title&&x.image&&/^assets\/[a-z0-9/_-]+\.(svg|png|jpg|jpeg|webp)$/i.test(x.image)&&(/^[#][a-z0-9-]+$/i.test(x.href||'')||/^https:\/\//i.test(x.href||''))&&validUrl(x.href))
   .sort((a,b)=>(Number(a.order)||0)-(Number(b.order)||0)).slice(0,4);
  if(!items.length)return null;
  const aside=el('aside','spotlight');aside.setAttribute('aria-label','Current spotlight');
@@ -86,7 +86,7 @@ function renderWelcome(){
 }
 function renderAbout(){let s=section('about');let layout=el('div','about-layout');let copy=el('div','about-copy');add(copy,p(site.introduction||''),p(site.about||''));if(site.portrait&&/^assets\//.test(site.portrait)){let frame=el('div','portrait-frame');let image=el('img','about-portrait');image.src=site.portrait;image.alt='Portrait of Nick Moore';image.loading='lazy';frame.append(image);layout.append(frame)}layout.append(copy);s.append(layout);let row=el('div','social-links');[['✉ Get in Touch','#contact'],['in LinkedIn',site.links?.linkedin],['▤ View CV','#cv']].forEach(([name,url])=>{let a=link(name,url,'btn alt');if(a)row.append(a)});s.append(row);return s}
 function renderProfiles(){return intro(section('profiles'),'Explore my areas of experience and interest. Select a profile to learn more.').appendChild(grid(data.profiles||[])).parentElement}
-function renderExperience(){let s=intro(section('experience-qualifications'),'A career built across different industries, alongside ongoing learning and professional development.');s.append(el('h3','subheading','Experience'),grid(data.experience||[]),el('h3','subheading','Qualifications & Training'),grid(data.qualifications||[]));return s}
+function renderExperience(){let s=intro(section('experience-qualifications'),'A career built across different industries, alongside ongoing learning and professional development.');s.append(el('h3','subheading','Experience'),grid(data.experience||[]),el('h3','subheading','Qualifications and Training'),grid(data.qualifications||[]));return s}
 function renderProjects(){let s=intro(section('projects'),'A mixture of technical projects, businesses, campaigns and creative work. Search or filter to explore.');let search=el('input','search');search.type='search';search.placeholder='Search projects, descriptions and skills…';search.setAttribute('aria-label','Search projects');let filters=el('div','filter'),out=el('div');let cats=[{id:'all',label:'All projects'},...(site.projectCategories||[])];let active='all';function draw(){out.replaceChildren();let q=search.value.trim().toLowerCase();let items=(data.projects||[]).filter(x=>x.visible!==false&&(active==='all'||x.category===active)&&[x.title,x.summary,x.detail,...(x.tags||[])].join(' ').toLowerCase().includes(q));out.append(items.length?grid(items):p('No matching projects found.','empty'));filters.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===active)))}cats.forEach(cat=>{let b=el('button','',cat.label);b.dataset.category=cat.id;b.type='button';b.addEventListener('click',()=>{active=cat.id;draw()});filters.append(b)});search.addEventListener('input',draw);add(s,search,filters,out);draw();return s}
 function renderAchievements(){return intro(section('achievements'),'Television, world records, campaigns and the occasional unexpected adventure.').appendChild(grid(data.achievements||[])).parentElement}
 function renderJourney(){let s=intro(section('journey'),'Three places I have called home, each with its own chapter.');let t=el('div','timeline');(data.journey||[]).forEach(x=>{let c=el('article','card');add(c,el('strong','',x.years),el('h3','',x.title),p(x.summary));if(x.id==='leeds'){let a=link('Explore my Professional Profiles →','#profiles','btn alt');if(a)c.append(a)}t.append(c)});s.append(t);return s}
@@ -108,7 +108,7 @@ function renderCV(){
  function block(title){let h=el('h3','cv-heading',title);page.append(h)}
  block('Professional Profile');page.append(p(v.summary));block('Key Skills');page.append(p((v.skills||[]).join('  •  ')));
  block('Experience');(v.roleIds||[]).forEach(rid=>{let r=(shared.roles||[]).find(x=>x.id===rid);if(!r)return;let e=el('div','cv-entry');e.append(el('h4','',r.title),p([r.employer,r.dates].filter(Boolean).join(' | '),'cv-meta'));let ul=el('ul');(r.bullets||[]).forEach(t=>ul.append(el('li','',t)));e.append(ul);page.append(e)});
- block('Qualifications & Development');(v.qualificationIds||[]).forEach(qid=>{let q=(shared.qualifications||[]).find(x=>x.id===qid);if(q)page.append(p(q.title+' — '+q.status,'cv-qualification'))});
+ block('Qualifications and Development');(v.qualificationIds||[]).forEach(qid=>{let q=(shared.qualifications||[]).find(x=>x.id===qid);if(q)page.append(p(q.title+' — '+q.status,'cv-qualification'))});
  preview.replaceChildren(page);if(updateHash)history.replaceState(null,'','#cv-'+id);
  }
  ids.forEach(id=>{let b=el('button','cv-choice',versions[id].title);b.type='button';b.dataset.version=id;b.addEventListener('click',()=>show(id));select.append(b)});

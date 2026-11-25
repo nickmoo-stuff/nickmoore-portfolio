@@ -36,17 +36,8 @@ window.PORTFOLIO.qualifications = [
     ]
   },
   {
-    "id": "secai",
-    "title": "CompTIA SecAI+",
-    "summary": "Part of planned or ongoing cybersecurity development; not awarded.",
-    "status": "In development",
-    "tags": [
-      "Cybersecurity"
-    ]
-  },
-  {
     "id": "crest-cpsa",
-    "title": "CREST CPSA",
+    "title": "CREST CPSA/CPIA or equivalent",
     "summary": "Future assessment goal; not currently awarded.",
     "status": "Planned",
     "tags": [
