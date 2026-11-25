@@ -100,10 +100,10 @@ function renderCV(){
  let hint=p('Public CV preview: no telephone number or email address is included. Contact via the website form or LinkedIn.','small muted');tools.append(print,hint);
  function show(id,updateHash=true){let v=versions[id];if(!v)return;select.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.version===id)));
  let page=el('article','cv-paper');
- let head=el('div','cv-header');let heading=el('div','cv-heading-content');heading.append(el('h2','cv-name',shared.name||'Nick Moore'),p(v.title,'cv-subtitle'));
+ let head=el('div','cv-header');let heading=el('div','cv-heading-content');heading.append(el('h2','cv-name',shared.name||'Nick Moore'));if(id!=='broad')heading.append(p(v.title,'cv-subtitle'));
  let contact=el('div','cv-contact');if(shared.location)contact.append(el('span','',shared.location));
- const contactLinks=[['Website',shared.website],['LinkedIn',shared.linkedin],['Email',shared.email?'mailto:'+shared.email:'']];contactLinks.forEach(([label,url])=>{let a=link(label,url);if(a){a.textContent=label==='Email'?shared.email:label==='Website'?url.replace(/^https?:\/\//,'').replace(/\/$/,''): 'LinkedIn';contact.append(a)}});
- if(!shared.website)contact.append(el('span','cv-placeholder','Website: add URL'));if(!shared.linkedin)contact.append(el('span','cv-placeholder','LinkedIn: add URL'));
+ const linkedin=link('linkedin.com/in/nick-moore-digital/','https://www.linkedin.com/in/nick-moore-digital/');if(linkedin)contact.append(linkedin);
+ const website=el('span','','View full and specialised CV at ');website.append(link('https://nickmoore.tech','https://nickmoore.tech'));contact.append(website);
  heading.append(contact);head.append(heading);page.append(head);
  function block(title){let h=el('h3','cv-heading',title);page.append(h)}
  block('Professional Profile');page.append(p(v.summary));block('Key Skills');page.append(p((v.skills||[]).join('  •  ')));
