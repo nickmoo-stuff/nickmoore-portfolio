@@ -1,6 +1,6 @@
 window.PORTFOLIO.cvVersions["customer-services"] = {
   "title": "Customer Services and CX/UX",
-  "summary": "Experienced customer services and digital communications professional with a background in local government, content design, customer experience, user research and service improvement.",
+  "summary": "Experienced customer services and digital communications professional with a background in local government, content design, customer experience, user research, and service improvement.",
   "skills": [
     "Customer services",
     "CX/UX",

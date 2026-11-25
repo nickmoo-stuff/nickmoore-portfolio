@@ -1,6 +1,6 @@
 window.PORTFOLIO.cvVersions["cybersecurity-tech"] = {
   "title": "Cybersecurity and Tech",
-  "summary": "Career-changing technology enthusiast studying cybersecurity, with experience in digital systems, web publishing, troubleshooting and practical projects.",
+  "summary": "Career-changing technology enthusiast studying cybersecurity, with experience in digital systems, web publishing, troubleshooting, and practical projects.",
   "skills": [
     "Security+ studies",
     "Linux labs",

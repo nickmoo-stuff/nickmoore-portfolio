@@ -1,10 +1,10 @@
 ## V0.2.1 visual update
 
-Slower typewriter (195 ms/character), longer section reveals, animated translucent cyan gradient sweeps inside hovered/focused cards, ambient hero lighting, stronger glow and slow breathing selected filters/CV tabs. All animations respect reduced-motion settings. No changes to editable content schema.
+Slower typewriter (195 ms/character), longer section reveals, animated translucent cyan gradient sweeps inside hovered/focused cards, ambient hero lighting, stronger glow, and slow breathing selected filters/CV tabs. All animations respect reduced-motion settings. No changes to editable content schema.
 
 # Nick Moore — Personal Portfolio v0.1
 
-A static, GitHub Pages-ready portfolio. No framework, database, login or analytics.
+A static, GitHub Pages-ready portfolio. No framework, database, login, or analytics.
 
 ## Preview locally
 
@@ -12,12 +12,12 @@ Open `index.html` in a browser. All content is loaded from ordinary JavaScript f
 
 ## Editing content
 
-- `content/site.js`: intro, section order, navigation labels, links and project categories.
+- `content/site.js`: intro, section order, navigation labels, links, and project categories.
 - `content/profiles.js`: professional profiles.
 - `content/experience.js`: career entries.
-- `content/qualifications.js`: completed, in-progress or planned learning.
-- `content/projects.js`: software, businesses, campaigns and other projects.
-- `content/achievements.js`: TV, records and adventures.
+- `content/qualifications.js`: completed, in-progress, or planned learning.
+- `content/projects.js`: software, businesses, campaigns, and other projects.
+- `content/achievements.js`: TV, records, and adventures.
 - `content/journey.js`: geographical journey.
 - `content/music.js`, `content/books.js`, `content/hobbies.js`: personal and creative galleries.
 
@@ -33,22 +33,22 @@ Do not publish a CV containing your private phone number unless you intentionall
 
 ## Deployment
 
-Create a new public GitHub repository and upload the files at the repository root. In Settings → Pages, select Deploy from a branch → main / root. GitHub Pages will give a temporary URL; configure a custom domain only after testing. Never commit private information, passwords, credentials or private project assets.
+Create a new public GitHub repository and upload the files at the repository root. In Settings → Pages, select Deploy from a branch → main / root. GitHub Pages will give a temporary URL; configure a custom domain only after testing. Never commit private information, passwords, credentials, or private project assets.
 
 ## Validation
 
-Run `node validate.mjs` (requires Node.js) to check duplicate IDs, missing fields, invalid categories, duplicate section names and unsafe links. Run before committing content edits.
+Run `node validate.mjs` (requires Node.js) to check duplicate IDs, missing fields, invalid categories, duplicate section names, and unsafe links. Run before committing content edits.
 
 ## Known starter-content limitations
 
-Descriptions are drafts where precise details have not yet been confirmed. No actual CV, LinkedIn URL, email, record certificates, book links or music artwork have been supplied. The website deliberately omits unverified external links. Review all content before publishing.
+Descriptions are drafts where precise details have not yet been confirmed. No actual CV, LinkedIn URL, email, record certificates, book links, or music artwork have been supplied. The website deliberately omits unverified external links. Review all content before publishing.
 
 
 ## Version 0.2 additions
 
-- Hero typewriter heading and blinking terminal cursor; smooth scroll, glowing interactive states, scroll reveals and journey timeline motion (reduced-motion friendly).
+- Hero typewriter heading and blinking terminal cursor; smooth scroll, glowing interactive states, scroll reveals, and journey timeline motion (reduced-motion friendly).
 - About Me shows only configured Email / LinkedIn plus View CV. Music section can show YouTube and Spotify. Instagram and public GitHub links are intentionally absent.
-- `content/cv/shared.js` stores factual career records, qualifications and public contact details. Four files in `content/cv/` contain tailored summaries, skills and record selection.
+- `content/cv/shared.js` stores factual career records, qualifications, and public contact details. Four files in `content/cv/` contain tailored summaries, skills, and record selection.
 - CV module offers Generic, Local Government, Cybersecurity & Tech, Social Media & Web, with A4 preview and browser Print / Save as PDF. Public CVs do **not** contain a phone number.
 - Direct CV URL: `#cv-generic`, `#cv-local-government`, `#cv-cybersecurity-tech`, `#cv-social-media-web`.
 - For best print results select A4, scale 100%, and turn off browser headers/footers. Long content may span multiple pages.
@@ -60,7 +60,7 @@ Descriptions are drafts where precise details have not yet been confirmed. No ac
 - Stronger **moving ambient lighting** now lives behind semi-transparent page sections. It remains visible even when the page is scrolled. Motion is disabled when the visitor requests reduced motion.
 - Your supplied black-and-white headshot is included at `assets/nick-moore-portrait.jpg` and appears in About Me.
 - All four CV versions have a **Include portrait on CV** checkbox (off by default for recruitment-system friendliness).
-- The CV header has linked Website, LinkedIn and Email fields, plus city-level location. Configure the public contact details in `content/cv/shared.js`. Until filled, labels clearly say to add the URL/address.
+- The CV header has linked Website, LinkedIn, and Email fields, plus city-level location. Configure the public contact details in `content/cv/shared.js`. Until filled, labels clearly say to add the URL/address.
 - `content/site.js` controls the About Me portrait. No phone number is stored.
 - The actual CV print/PDF layout should be checked in Chrome Print Preview; pagination depends on the final amount of content.
 
@@ -83,7 +83,7 @@ Each card may have a `sources` array. In its `detail` (or `summary` if no detail
 }
 ```
 
-Only sources with matching markers and valid URLs appear in the expandable Sources & references panel. Cards without citations show no panel. `links` remains available for unrelated general links. Run `node validate.mjs` to catch missing, duplicate or unused sources. Backtick template literals and blank lines are supported for multi-paragraph descriptions.
+Only sources with matching markers and valid URLs appear in the expandable Sources & references panel. Cards without citations show no panel. `links` remains available for unrelated general links. Run `node validate.mjs` to catch missing, duplicate, or unused sources. Backtick template literals and blank lines are supported for multi-paragraph descriptions.
 
 
 ## V0.2.5 — inline text emphasis
@@ -96,9 +96,12 @@ Edit `content/spotlight.js` to set each tile's `enabled`, `order`, `title`, `des
 
 
 ## V0.2.7 update
-Added supplied music and book artwork, 22 music releases plus a Christmas playlist, career and Journey copy, populated tailored CVs, projects and Google Forms contact link. No public email address or telephone number is embedded.
+Added supplied music and book artwork, 22 music releases plus a Christmas playlist, career and Journey copy, populated tailored CVs, projects, and Google Forms contact link. No public email address or telephone number is embedded.
 
 **Source note:** This package is based on the provided V0.2.6 ZIP, not a fresh GitHub checkout. Compare any edits made directly on GitHub since V0.2.6 before replacing those files.
 
 ## V0.2.8
 Live shop spotlight, expanded professional experience, five tailored CVs and technical competencies, refreshed training and About Me.
+
+## Editorial standard
+Use the Oxford (serial) comma in every prose list of three or more items, including website copy, CVs, and future content. Preserve official names, titles, and verbatim quotations. Do not insert commas into two-item lists or compound phrases.

@@ -8,13 +8,13 @@ window.PORTFOLIO.cvShared = {
   "roles": [
     {
       "id": "council",
-      "title": "Digital Communications, Social Media and Customer Services",
+      "title": "Digital Communications, Social Media, and Customer Services",
       "employer": "Leeds City Council",
       "dates": "2012–2026",
       "bullets": [
-        "Fourteen years across digital communications, web content and customer service.",
+        "Fourteen years across digital communications, web content, and customer service.",
         "Led a small social media team and advised stakeholders across council services.",
-        "Wrote, proofread and published CMS content; used analytics to support decisions.",
+        "Wrote, proofread, and published CMS content; used analytics to support decisions.",
         "Contributed to an organic public-awareness campaign reaching over 3 million people.",
         "Project management."
       ]
@@ -27,7 +27,7 @@ window.PORTFOLIO.cvShared = {
       "bullets": [
         "Student representation, stakeholder engagement and leadership.",
         "Served on the Board of Governors at Leeds College of Music.",
-        "Bookkeeping, budgeting and annual accounts.",
+        "Bookkeeping, budgeting, and annual accounts.",
         "Project management."
       ]
     },
@@ -38,7 +38,7 @@ window.PORTFOLIO.cvShared = {
       "dates": "Earlier career",
       "bullets": [
         "Helped organise over 100 live music events and a local music festival.",
-        "Managed live sound, equipment and creative production."
+        "Managed live sound, equipment, and creative production."
       ]
     },
     {
@@ -49,7 +49,7 @@ window.PORTFOLIO.cvShared = {
       "bullets": [
         "Designed their new website using Joomla CMS; email marketing and graphic design.",
         "Level 3 qualification in Mentoring; Entry Level Youth Work; Child Protection and Safeguarding.",
-        "Delivered audio, video and animation workshops to NEET young people in remote and hard-to-reach communities through the Jam Van multimedia outreach van.",
+        "Delivered audio, video, and animation workshops to NEET young people in remote and hard-to-reach communities through the Jam Van multimedia outreach van.",
         "Assisted with and wrote funding bids.",
         "Created and maintained Huntingdonshire Youth Bank's funding panel website and assisted with panel administration."
       ]
@@ -108,7 +108,7 @@ window.PORTFOLIO.cvShared = {
       "Academy",
       "SharePoint",
       "Microsoft 365 (advanced Office suite and Teams user)",
-      "Content design, CX/UX and user research"
+      "Content design, CX/UX, and user research"
     ],
     "Digital communications": [
       "Meta Business Suite and analytics",
@@ -116,7 +116,7 @@ window.PORTFOLIO.cvShared = {
       "Facebook pages and groups",
       "Orlo/SocialSignIn",
       "TikTok marketing (organic and paid)",
-      "YouTube Studio, analytics and marketing (organic and paid)",
+      "YouTube Studio, analytics, and marketing (organic and paid)",
       "X analytics",
       "LinkedIn business analytics",
       "Canva",
@@ -145,7 +145,7 @@ window.PORTFOLIO.cvShared = {
       "HTML, CSS, JavaScript",
       "Google Console",
       "Licensed Google Developer",
-      "CMS platforms (GitHub Pages, WordPress, SharePoint, Joomla, Squarespace and others)",
+      "CMS platforms (GitHub Pages, WordPress, SharePoint, Joomla, Squarespace, and others)",
       "Cloudflare",
       "Brevo",
       "Domain name setup"

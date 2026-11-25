@@ -4,7 +4,7 @@ window.PORTFOLIO.profiles = [
     "title": "Cybersecurity",
     "icon": "🛡",
     "summary": "Security studies, practical labs and developing technical skills.",
-    "detail": "Studying Security+ and developing hands-on Linux, lab and security-tool skills. Certifications listed as in progress until awarded.",
+    "detail": "Studying Security+ and developing hands-on Linux, lab, and security-tool skills. Certifications listed as in progress until awarded.",
     "tags": [
       "Security studies",
       "Linux"
@@ -15,7 +15,7 @@ window.PORTFOLIO.profiles = [
     "title": "Copywriting and Proofreading",
     "icon": "✍",
     "summary": "Clear communication, editorial judgement and written content.",
-    "detail": "Professional experience writing, editing and proofreading public-facing web and social content in local government."
+    "detail": "Professional experience writing, editing, and proofreading public-facing web and social content in local government."
   },
   {
     "id": "m365",
@@ -28,7 +28,7 @@ window.PORTFOLIO.profiles = [
     "id": "social",
     "title": "Social Media",
     "icon": "◉",
-    "summary": "Digital communications, content and audience engagement.",
+    "summary": "Digital communications, content, and audience engagement.",
     "detail": "Led local-government social media work, advised stakeholders, monitored analytics and supported campaigns reaching large audiences."
   },
   {
@@ -43,13 +43,13 @@ window.PORTFOLIO.profiles = [
     "title": "Customer Services",
     "icon": "☏",
     "summary": "Practical, people-focused service and problem solving.",
-    "detail": "Frontline local-government customer services across housing, council tax and other enquiries, including sensitive and complex cases."
+    "detail": "Frontline local-government customer services across housing, council tax, and other enquiries, including sensitive and complex cases."
   },
   {
     "id": "inventory",
     "title": "Asset and Inventory Management",
     "icon": "▤",
-    "summary": "Organisation, tracking and operational processes.",
+    "summary": "Organisation, tracking, and operational processes.",
     "detail": "Operational organisation and process improvement experience; additional examples can be added as available."
   },
   {
@@ -63,14 +63,14 @@ window.PORTFOLIO.profiles = [
     "id": "creative",
     "title": "Creative Industries",
     "icon": "♫",
-    "summary": "Music, events, media and creative projects.",
+    "summary": "Music, events, media, and creative projects.",
     "detail": "Music production, recorded releases, live-event organisation, sound technology and publishing."
   },
   {
     "id": "gdpr",
     "title": "GDPR and Information Governance",
     "icon": "⚿",
-    "summary": "Responsible information handling, privacy and governance.",
+    "summary": "Responsible information handling, privacy, and governance.",
     "detail": "Practical GDPR and information-governance awareness through local-government communications and customer-facing work."
   },
   {
@@ -78,7 +78,7 @@ window.PORTFOLIO.profiles = [
     "title": "AI and Workflow Automation",
     "icon": "✧",
     "summary": "Exploring practical AI-assisted workflows and process improvements.",
-    "detail": "Exploring AI-supported content, development and workflow automation in personal projects."
+    "detail": "Exploring AI-supported content, development, and workflow automation in personal projects."
   },
   {
     "id": "game-development",

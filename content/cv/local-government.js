@@ -1,6 +1,6 @@
 window.PORTFOLIO.cvVersions["local-government"] = {
   "title": "Local Government",
-  "summary": "Public-sector professional with extensive experience in local-government communications, digital service delivery, stakeholders and customer support.",
+  "summary": "Public-sector professional with extensive experience in local-government communications, digital service delivery, stakeholders, and customer support.",
   "skills": [
     "Local government",
     "Stakeholder engagement",

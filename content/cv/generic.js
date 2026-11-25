@@ -1,6 +1,6 @@
 window.PORTFOLIO.cvVersions["broad"] = {
   "title": "Broad",
-  "summary": "Experienced professional with 14 years in local government, combining communications, customer service, leadership and creative technical projects.",
+  "summary": "Experienced professional with 14 years in local government, combining communications, customer service, leadership, and creative technical projects.",
   "skills": [
     "Leadership",
     "Customer services",

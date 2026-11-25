@@ -47,7 +47,7 @@ window.PORTFOLIO.qualifications = [
   {
     "id": "other-training",
     "title": "Other Training and Professional Development",
-    "summary": "Additional training in management, digital skills, mentoring and workplace wellbeing.",
+    "summary": "Additional training in management, digital skills, mentoring, and workplace wellbeing.",
     "detail": "c. 2007 — Entry Level Youth Work (Level 1)\n\nc. 2008 — Business Start-up Course (3 days)\n\nc. 2008 — Train the Trainer: Mentoring\n\n2011 — Emergency First Aid at Work (expired)\n\n2015 — Google Academy: SEO, content design and social marketing\n\n2015 — Social Media Law Masterclass\n\n2015 — Project Management (PM) Lite Fundamentals\n\n2016 — DSE Assessor\n\n2017 — Managing Mental Health in the Workplace\n\n2018 — First Time Manager Programme\n\n2019 — Manager as Coach / Coaching in the Workplace\n\n2019 — Introduction to Outcome Based Accountability\n\nc. 2019 — Established Manager Training\n\n2022 — Disability Confident and Inclusion Essentials\n\n2024 — Information Governance Level 1\n\nc. 2024 — Mental Health Awareness for Managers\n\n2025 — Inclusive Recruitment and Selection",
     "training": [
       "c. 2007 — Entry Level Youth Work (Level 1)",
@@ -72,7 +72,7 @@ window.PORTFOLIO.qualifications = [
   {
     "id": "be-your-best",
     "title": "Be Your Best — Management and Professional Development Programme",
-    "summary": "2022–2025 · Leadership, team management, equality and diversity, change management and digital process improvement.",
+    "summary": "2022–2025 · Leadership, team management, equality and diversity, change management, and digital process improvement.",
     "detail": "Leeds City Council management development programme.",
     "modules": [
       "Equality, Diversity and Inclusion",
