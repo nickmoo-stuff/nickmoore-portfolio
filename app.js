@@ -108,7 +108,7 @@ function renderCV(){
  function block(title){let h=el('h3','cv-heading',title);page.append(h)}
  block('Professional Profile');page.append(p(v.summary));block('Key Skills');page.append(p((v.skills||[]).join('  •  ')));
  block('Experience');(v.roleIds||[]).forEach(rid=>{let r=(shared.roles||[]).find(x=>x.id===rid);if(!r)return;let e=el('div','cv-entry');e.append(el('h4','',r.title),p([r.employer,r.dates].filter(Boolean).join(' | '),'cv-meta'));let ul=el('ul');(r.bullets||[]).forEach(t=>ul.append(el('li','',t)));e.append(ul);page.append(e)});
- block('Qualifications and Development');(v.qualificationIds||[]).forEach(qid=>{let q=(shared.qualifications||[]).find(x=>x.id===qid);if(q)page.append(p(q.title+' — '+q.status,'cv-qualification'))});
+ block('Qualifications and Development');page.lastElementChild.classList.add('cv-print-page-break');(v.qualificationIds||[]).forEach(qid=>{let q=(shared.qualifications||[]).find(x=>x.id===qid);if(q)page.append(p(q.title+' — '+q.status,'cv-qualification'))});
  block('Tech competencies');(v.competencyGroups||[]).forEach(name=>{let group=el('div','cv-competency');group.append(el('h4','',name),p((shared.techCompetencies?.[name]||[]).join('  •  ')));page.append(group)});
  preview.replaceChildren(page);if(updateHash)history.replaceState(null,'','#cv-'+id);
  }
