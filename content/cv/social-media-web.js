@@ -1,5 +1,5 @@
 window.PORTFOLIO.cvVersions["social-media-web"] = {
-  "title": "Social Media & Web",
+  "title": "Social Media and Web",
   "summary": "Digital communications specialist with leadership experience, content design, analytics, social media strategy and web publishing.",
   "skills": [
     "Social media strategy",
@@ -10,13 +10,19 @@ window.PORTFOLIO.cvVersions["social-media-web"] = {
   ],
   "roleIds": [
     "council",
-    "events"
+    "events",
+    "young-lives"
   ],
   "qualificationIds": [
     "ba",
     "btec",
     "security-plus",
-    "secai",
-    "crest-cpsa"
+    "crest-cpsa",
+    "mentoring"
+  ],
+  "competencyGroups": [
+    "Digital communications",
+    "AI, web and Android, cloud",
+    "Audio"
   ]
 };

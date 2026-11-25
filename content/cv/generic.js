@@ -1,5 +1,5 @@
-window.PORTFOLIO.cvVersions["generic"] = {
-  "title": "Generic",
+window.PORTFOLIO.cvVersions["broad"] = {
+  "title": "Broad",
   "summary": "Experienced professional with 14 years in local government, combining communications, customer service, leadership and creative technical projects.",
   "skills": [
     "Leadership",
@@ -11,13 +11,22 @@ window.PORTFOLIO.cvVersions["generic"] = {
   "roleIds": [
     "council",
     "union",
-    "events"
+    "events",
+    "young-lives"
   ],
   "qualificationIds": [
     "ba",
     "btec",
     "security-plus",
-    "secai",
-    "crest-cpsa"
+    "crest-cpsa",
+    "mentoring"
+  ],
+  "competencyGroups": [
+    "Customer services",
+    "Digital communications",
+    "Audio",
+    "AI, web and Android, cloud",
+    "Cybersecurity",
+    "Local government"
   ]
 };

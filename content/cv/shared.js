@@ -5,11 +5,10 @@ window.PORTFOLIO.cvShared = {
   "website": "https://nickmoore.tech",
   "email": "",
   "linkedin": "https://linkedin.com/in/nick-moore-digital",
-  "portrait": "assets/nick-moore-portrait.jpg",
   "roles": [
     {
       "id": "council",
-      "title": "Digital Communications, Social Media & Customer Services",
+      "title": "Digital Communications, Social Media and Customer Services",
       "employer": "Leeds City Council",
       "dates": "2012–2026",
       "bullets": [
@@ -38,6 +37,19 @@ window.PORTFOLIO.cvShared = {
         "Helped organise over 100 live music events and a local music festival.",
         "Managed live sound, equipment and creative production."
       ]
+    },
+    {
+      "id": "young-lives",
+      "title": "Digital Communications and Youth Outreach",
+      "employer": "Young Lives Cambridgeshire",
+      "dates": "2007–2009",
+      "bullets": [
+        "Designed their new website using Joomla CMS; email marketing and graphic design.",
+        "Level 3 qualification in Mentoring; Entry Level Youth Work; Child Protection and Safeguarding.",
+        "Delivered audio, video and animation workshops to NEET young people in remote and hard-to-reach communities through the Jam Van multimedia outreach van.",
+        "Assisted with and wrote funding bids.",
+        "Created and maintained Huntingdonshire Youth Bank's funding panel website and assisted with panel administration."
+      ]
     }
   ],
   "qualifications": [
@@ -62,15 +74,78 @@ window.PORTFOLIO.cvShared = {
       "status": "Studying — not awarded"
     },
     {
-      "id": "secai",
-      "title": "CompTIA SecAI+",
-      "status": "In development — not awarded"
+      "id": "crest-cpsa",
+      "title": "CREST CPSA/CPIA or equivalent",
+      "status": "Planned — not awarded"
     },
     {
-      "id": "crest-cpsa",
-      "title": "CREST CPSA",
-      "status": "Planned — not awarded"
+      "id": "mentoring",
+      "title": "Level 3 qualification in Mentoring",
+      "status": "Completed"
     }
-  ]
+  ],
+  "techCompetencies": {
+    "Customer services": [
+      "CRM",
+      "Academy",
+      "SharePoint",
+      "Microsoft 365 (advanced Office suite and Teams user)",
+      "Content design, CX/UX and user research"
+    ],
+    "Digital communications": [
+      "Meta Business Suite and analytics",
+      "Facebook and Instagram marketing (organic and paid)",
+      "Facebook pages and groups",
+      "Orlo/SocialSignIn",
+      "TikTok marketing (organic and paid)",
+      "YouTube Studio, analytics and marketing (organic and paid)",
+      "X analytics",
+      "LinkedIn business analytics",
+      "Canva",
+      "Clipchamp",
+      "CapCut",
+      "KineMaster",
+      "SharePoint"
+    ],
+    "Audio": [
+      "Logic Pro",
+      "REAPER",
+      "Multi-platform publishing",
+      "Studio hardware",
+      "Diagnostics and troubleshooting",
+      "Podcasting"
+    ],
+    "AI, web and Android, cloud": [
+      "SharePoint",
+      "Google Drive",
+      "Dropbox",
+      "Teams, Zoom, Discord",
+      "GitHub",
+      "ChatGPT",
+      "Codex",
+      "Godot",
+      "HTML, CSS, JavaScript",
+      "Google Console",
+      "Licensed Google Developer",
+      "CMS platforms (GitHub Pages, WordPress, SharePoint, Joomla, Squarespace and others)",
+      "Cloudflare",
+      "Brevo",
+      "Domain name setup"
+    ],
+    "Cybersecurity": [
+      "Linux",
+      "Oracle VirtualBox",
+      "Kali"
+    ],
+    "Local government": [
+      "Procurement frameworks and tendering",
+      "GDPR",
+      "DPIA",
+      "Recruitment",
+      "Equality and diversity",
+      "Mental health awareness",
+      "Local Government Finance Act 1992"
+    ]
+  }
 };
 window.PORTFOLIO.cvVersions = {};

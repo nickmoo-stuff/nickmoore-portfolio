@@ -27,7 +27,7 @@ Lost the record when it was beaten on the same day 8 years later at Stockeld Par
   },
   {
     id: "campaigns",
-    title: "Campaigns & Unexpected Adventures",
+    title: "Campaigns and Unexpected Adventures",
     icon: "🚀",
     summary: "Political ventures, creative campaigns and other interesting chapters.",
     detail: `Local election candidate May 2026

@@ -10,13 +10,20 @@ window.PORTFOLIO.cvVersions["local-government"] = {
   ],
   "roleIds": [
     "council",
-    "union"
+    "union",
+    "young-lives"
   ],
   "qualificationIds": [
     "ba",
     "btec",
     "security-plus",
-    "secai",
-    "crest-cpsa"
+    "crest-cpsa",
+    "mentoring"
+  ],
+  "competencyGroups": [
+    "Local government",
+    "Customer services",
+    "Digital communications",
+    "AI, web and Android, cloud"
   ]
 };

@@ -1,5 +1,5 @@
 window.PORTFOLIO.cvVersions["cybersecurity-tech"] = {
-  "title": "Cybersecurity & Tech",
+  "title": "Cybersecurity and Tech",
   "summary": "Career-changing technology enthusiast studying cybersecurity, with experience in digital systems, web publishing, troubleshooting and practical projects.",
   "skills": [
     "Security+ studies",
@@ -10,13 +10,19 @@ window.PORTFOLIO.cvVersions["cybersecurity-tech"] = {
   ],
   "roleIds": [
     "council",
-    "events"
+    "events",
+    "young-lives"
   ],
   "qualificationIds": [
     "ba",
     "btec",
     "security-plus",
-    "secai",
-    "crest-cpsa"
+    "crest-cpsa",
+    "mentoring"
+  ],
+  "competencyGroups": [
+    "Cybersecurity",
+    "AI, web and Android, cloud",
+    "Local government"
   ]
 };
